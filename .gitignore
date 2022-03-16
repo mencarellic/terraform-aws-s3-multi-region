@@ -1,0 +1,16 @@
+.terraform.tfstate.lock.info
+.terraform.lock.hcl
+terraform.tfstate
+.terraform
+*.tfvars
+remote.tf
+
+*.zip
+!azure/modules/terraform-azure-batch-account/packages/*.zip
+!aws/common-files/*.zip
+
+.DS_Store
+.idea/*
+*.iml
+.tool-versions
+*.code-workspace
