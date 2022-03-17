@@ -9,7 +9,7 @@ resource "aws_s3_bucket_public_access_block" "app-artifact-east-2" {
 }
 
 resource "aws_s3_bucket" "app-artifact-east-2" {
-  bucket = "this-is-my-app-east-2"
+  bucket = "mencarelli-${random_pet.s3-bucket.id}-east-2"
   acl    = "private"
 
   versioning {
@@ -30,7 +30,7 @@ resource "aws_s3_bucket_public_access_block" "app-artifact-west-2" {
 }
 
 resource "aws_s3_bucket" "app-artifact-west-2" {
-  bucket = "this-is-my-app-west-2"
+  bucket = "mencarelli-${random_pet.s3-bucket.id}-west-2"
   acl    = "private"
 
   versioning {
