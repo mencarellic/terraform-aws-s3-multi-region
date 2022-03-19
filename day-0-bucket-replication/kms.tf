@@ -38,20 +38,7 @@ data "aws_iam_policy_document" "bucket-encryption-kms-policy" {
       ]
     }
     actions = [
-      "kms:Create*",
-      "kms:Describe*",
-      "kms:Enable*",
-      "kms:List*",
-      "kms:Put*",
-      "kms:Update*",
-      "kms:Revoke*",
-      "kms:Disable*",
-      "kms:Get*",
-      "kms:Delete*",
-      "kms:TagResource",
-      "kms:UntagResource",
-      "kms:ScheduleKeyDeletion",
-      "kms:CancelKeyDeletion"
+      "kms:*"
     ]
     resources = ["*"]
   }
