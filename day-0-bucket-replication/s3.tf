@@ -159,3 +159,17 @@ resource "aws_s3_bucket_replication_configuration" "app-artifact-west-2" {
 
   provider = aws.west-2
 }
+
+resource "aws_s3control_multi_region_access_point" "app-artifact" {
+  details {
+    name = "app-artifact"
+
+    region {
+      bucket = aws_s3_bucket.app-artifact-east-2.id
+    }
+
+    region {
+      bucket = aws_s3_bucket.app-artifact-west-2.id
+    }
+  }
+}
