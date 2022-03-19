@@ -56,7 +56,7 @@ resource "aws_s3_bucket_inventory" "app-artifact-east-2" {
   provider = aws.east-2
 }
 
-resource "aws_s3_bucket_object" "contents" {
+resource "aws_s3_object" "contents" {
   count = length(random_pet.contents)
 
   bucket  = aws_s3_bucket.app-artifact-east-2.bucket
