@@ -34,7 +34,8 @@ data "aws_iam_policy_document" "bucket-encryption-kms-policy" {
     principals {
       type = "AWS"
       identifiers = [
-        "arn:aws:iam::${local.account_id}:user/terraform"
+        "arn:aws:iam::${local.account_id}:user/terraform",
+        aws_iam_role.s3-batch-copy.arn
       ]
     }
     actions = [
