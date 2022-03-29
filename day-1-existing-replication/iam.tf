@@ -1,5 +1,5 @@
 resource "aws_iam_role" "s3-batch-copy" {
-  name               = "s3-batch-copy"
+  name               = "s3-day1-replication"
   assume_role_policy = data.aws_iam_policy_document.s3-batch-copy-assume-role-policy.json
 }
 
